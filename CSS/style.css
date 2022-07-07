@@ -215,29 +215,34 @@ a {
   }
 
   .link-four {
-    color: #dfeb32;
+    color: yellow;
     transition: color 1s cubic-bezier(0.32, 0, 0.67, 0);
     line-height: 1em;
-  }
-  
-  .link-four:hover {
+}
+
+.link-four:hover {
     color: #111;
-    transition: color 1s cubic-bezier(.33, 1, .66, 1);
-   }
-  
-   .link-four::before {
+    transition: color 1s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.link-four::before {
     content: "";
     position: absolute;
     z-index: -1;
     width: 100%;
     height: 100%;
     top: 0;
-    left: 0;
-    background-color: #dfeb32;
+    right: 0;
+    background-color: yellow;
 
     clip-path: circle(0% at 50% calc(50%));
-    transition: clip-path 1s cubic-bezier(1, .35, 0, .65);
+    transition: clip-path 1s cubic-bezier(0.65, 0, 0.35, 1);
 }
+
+.link-four:hover::before {
+    clip-path: circle(100% at 50% 50%);
+}
+
 .link-four::after {
     content: "";
     position: absolute;
@@ -248,12 +253,14 @@ a {
     right: 0;
     background-color: #151515;
 
-    clip-path: polygon(40% 0%,
-    60% 0%,
-    60% 0%,
-    40% 0%,
-    40% 100%,
-    60% 100%,
-    60% 100%
-    40% 100%);
+    clip-path: polygon(
+      40% 0%,
+      60% 0%,
+      60% 0%,
+      40% 0%,
+      40% 100%,
+      60% 100%,
+      60% 100%,
+      40% 100%
+            );
 }
