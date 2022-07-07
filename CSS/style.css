@@ -113,11 +113,11 @@ a {
       100% 120%,
       100% 100%,
       0% 110%
-    );
+    ); 
     background-color: #f27b9b;
   
     transition: clip-path 1s cubic-bezier(0.25, 1, 0.5, 1);
-  }
+  } 
   
   .link-two:hover::before {
     clip-path: polygon(
@@ -128,7 +128,7 @@ a {
       0% 100%,
       100% 90%,
       100% 70%,
-      0% 80%
+      0% 80% 
     );
   }
   
